@@ -496,7 +496,7 @@ export default function HeroStudio({ imageSrc = "/myroom.jpg" }) {
             transition={{ duration: 0.6, ease: "easeOut" }}
           >
             <div className="pill"><span className="bead" /> About</div>
-            <h2>“I can accept failure, but I can’t accept not trying.” <span className="by">— Michael Jordan</span></h2>
+            <h2>“I can accept failure,Everyone Fails At Something.But I can’t accept not trying.” <span className="by">— Michael Jordan</span></h2>
             <p className="sub"></p>
           </motion.header>
 
