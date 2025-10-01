@@ -415,7 +415,7 @@ export default function HeroStudio({ imageSrc = "/myroom.jpg" }) {
         <header className="nav">
           <div className="brand">Aryan<span className="dot">.</span></div>
           <nav className="links">
-            <a href="#about">About me and My Skills</a>
+            <a href="#about">About</a>
            {/* <a href="#skills">Skills</a> */}
             <a href="#projects" aria-disabled>Projects</a>
             <a href="#contact" aria-disabled>Contact</a>
@@ -889,6 +889,31 @@ html, body, #root {
 
 /* Optional: keep vertical scrollbar space reserved to avoid layout shift */
 :root { scrollbar-gutter: stable; }
+
+
+
+    /* --- HERO mobile fixes --- */
+@media (max-width: 700px){
+  .wrap{ padding: 32px 16px 72px; }          /* safer side padding on phones */
+  .right{ width: 100%; }                     /* ensure aside can't exceed viewport */
+  .frame{
+    width: min(100%, 92vw);                  /* <= key fix: drop 560px min */
+    max-width: 560px;                        /* keep nice cap for tablets */
+  }
+  .floor{ width: min(560px, 80%); }          /* keep glow under the new width */
+}
+
+/* Extra small phones */
+@media (max-width: 420px){
+  .title{ font-size: clamp(26px, 8vw, 34px); line-height: 1.15; }
+  .lede{ font-size: 0.98rem; max-width: 100%; }
+}
+
+/* Safety: hero never introduces horizontal scroll */
+.studio-hero.v2{ overflow-x: hidden; }
+  
+
+
 
 
       `}</style>
