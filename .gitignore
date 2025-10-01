@@ -1,0 +1,60 @@
+# Dependencies
+node_modules/
+.pnp/
+.pnp.js
+
+# Build outputs
+dist/
+build/
+
+# Env / secrets
+.env
+.env.*
+!.env.example
+
+# Logs & diagnostics
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+pnpm-error.log*
+lerna-debug.log*
+*.log
+
+# Editor cruft
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Test / coverage
+coverage/
+*.lcov
+
+# Caches
+.cache/
+.vite/
+.eslintcache
+.stylelintcache
+tsconfig.tsbuildinfo
+
+# Storybook (if any)
+.storybook-out/
+out/
+.storybook-cache/
+
+# Static exports (if any)
+.next/
+.svelte-kit/
+
+# Docker
+docker-cache/
+*.tar
+
+# Misc
+*.local
+*.orig
