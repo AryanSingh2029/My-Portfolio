@@ -916,6 +916,27 @@ html, body, #root {
 
 
 
+/* --- ABOUT: stronger mobile inset so card borders don't hug the edge --- */
+@media (max-width: 480px){
+  /* give the section a bit of side padding */
+  .about-wrap{ padding-inline: 16px; }
+
+  /* tiny inner breathing room for the grid itself */
+  .about-grid{ padding-inline: 4px; gap: 16px; }
+
+  /* the fix: clamp every about card to less than the viewport */
+  .about-grid .card{
+    width: auto;                /* ignore 100% rule if any */
+    max-width: 88vw;            /* ← adjust to 90/86 if you want more/less inset */
+    margin-inline: auto;        /* center it */
+  }
+
+  /* optional: let KPIs stack nicer on very small phones */
+  .highlights .row{ grid-template-columns: 1fr; }
+}
+
+
+
       `}</style>
     </div>
   );
